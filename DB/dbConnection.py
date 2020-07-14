@@ -9,7 +9,7 @@ class DBConnection(object):
     def get_connection(cls):
         """Creates return new Singleton database connection"""
         if cls.connection == None:
-            cls.connection = DBConnector('localhost', 'root', 'root', 'entrena_db').create_connection()
+            cls.connection = DBConnector('', '', '', '').create_connection() #put your credentianls here
         return cls.connection
 
     @classmethod
